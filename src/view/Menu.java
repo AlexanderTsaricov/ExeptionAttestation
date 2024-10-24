@@ -18,6 +18,7 @@ public class Menu {
                     System.out.println("<фамилия> <имя> <отчество> <номер телефона> <пол: f или m>");
                     System.out.print("Введите: ");
                     String inputData = scan.nextLine();
+                    String[] arrInputData = inputData.split(" ");
                 } else {
                     throw new IllegalArgumentException();
                 }
