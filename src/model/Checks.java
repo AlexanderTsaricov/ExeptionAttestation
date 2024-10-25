@@ -6,20 +6,20 @@ import java.time.format.DateTimeParseException;
 
 public class Checks {
     public boolean dataCheck (String data) {
-        String[] arrData = data.split(".");
+        String[] arrData = data.split("\\.");
         int[] intArrData = new int[arrData.length];
         for (int i = 0, j = 2; i < intArrData.length; i++, j--) {
             try {
                 intArrData[i] = Integer.parseInt(arrData[j]);
             } catch (Exception e){
-                System.out.println(e.getMessage());
+                System.out.println(e.getMessage() + " ошибка даты строка 15");
                 return false;
             }
         }
         try {
             DateTimeFormatter.ISO_LOCAL_DATE.format(LocalDate.of(intArrData[0], intArrData[1], intArrData[2]));
         } catch (DateTimeParseException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage() + " ошибка даты строка 20");
             return false;
         }
         return true;

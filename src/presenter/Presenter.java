@@ -12,6 +12,7 @@ public class Presenter {
     SaveInFile save;
     public Presenter () {
         cheks = new Checks();
+        save = new SaveInFile();
         SaveInFile SaveInFile = new SaveInFile();
     }
     public boolean checkCount (String[] arr) {

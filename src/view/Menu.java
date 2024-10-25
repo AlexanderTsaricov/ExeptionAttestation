@@ -21,6 +21,7 @@ public class Menu {
                 if (input == 2) {
                     flag = false;
                 } else if (input == 1) {
+                    scan.nextLine();
                     System.out.println("Введите данные в формате:");
                     System.out.println("<фамилия> <имя> <отчество> <дата рождения в формате дд.мм.гггг> <номер телефона> <пол: f или m>");
                     System.out.print("Введите: ");
