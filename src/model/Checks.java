@@ -24,4 +24,20 @@ public class Checks {
         }
         return true;
     }
+
+    public boolean countInputDataCheck (String[] input) {
+        if (input.length == 6) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean sexCheck (String sex) {
+        if (sex.equals("m") || sex.equals("f")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
